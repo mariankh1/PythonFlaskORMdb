@@ -17,6 +17,9 @@
 	<form method="POST" action="./update"style="display: inline">
 	    <input type="hidden" value="{{drone.name}}" name="oldname">
 	    <input type="text" value="{{drone.name}}" name="newname">
+	    <input type="text" value="{{drone.latitude}}" name="newlat">
+	    <input type="text" value="{{drone.longitude}}" name="newlon">
+	    <input type="text" value="{{drone.altitude}}" name="newalt">
 	    <input type="submit" value="Update">
 	  </form>
      </td>

@@ -60,8 +60,14 @@ def delete():
 def update():
     newname = request.form.get("newname")
     oldname = request.form.get("oldname")
+    newlat = request.form.get("newlat")
+    newlon = request.form.get("newlon")
+    newalt = request.form.get("newalt")
     drone = Drone.query.filter_by(name=oldname).first()
     drone.name = newname
+    drone.latitude = newlat
+    drone.longitude = newlon
+    drone.altitude = newalt
     db.session.commit()
     return redirect("/")
 
